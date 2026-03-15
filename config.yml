@@ -1,0 +1,43 @@
+app:
+  name: "fleet-management"
+  port: "8080"
+
+database:
+  host: "postgres"
+  port: "5432"
+  user: "fleet_user"
+  password: "fleet_password"
+  name: "fleet_db"
+  sslmode: "disable"
+  max_open_conns: 10
+  max_idle_conns: 5
+  conn_max_lifetime: 300
+
+mqtt:
+  broker: "tcp://mosquitto:1883"
+  client_id: "fleet-service"
+  username: ""
+  password: ""
+  topic_prefix: "/fleet/vehicle"
+  qos: 1
+  keep_alive: 60
+  ping_timeout: 10
+
+rabbitmq:
+  url: "amqp://guest:guest@rabbitmq:5672/"
+  exchange: "fleet.events"
+  exchange_type: "direct"
+  queue: "geofence_alerts"
+  routing_key: "geofence"
+  consumer_tag: "fleet-consumer"
+
+geofence:
+  points:
+    - name: "Monas"
+      latitude: -6.1754
+      longitude: 106.8272
+      radius_meters: 50
+    - name: "Sudirman"
+      latitude: -6.2088
+      longitude: 106.8182
+      radius_meters: 50

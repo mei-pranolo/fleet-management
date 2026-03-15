@@ -1,0 +1,20 @@
+mqtt:
+  broker: "tcp://mosquitto:1883"
+  client_id: "fleet-feeder"
+  username: ""
+  password: ""
+  topic_prefix: "/fleet/vehicle"
+  qos: 1
+
+feeder:
+  interval_seconds: 2
+  vehicles:
+    - id: "B1234XYZ"
+      base_latitude: -6.2088
+      base_longitude: 106.8456
+    - id: "B5678ABC"
+      base_latitude: -6.1754
+      base_longitude: 106.8272
+    - id: "B9999DEF"
+      base_latitude: -6.2300
+      base_longitude: 106.8400
