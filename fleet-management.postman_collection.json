@@ -1,0 +1,68 @@
+{
+  "info": {
+    "_postman_id": "22715d21-987d-4e2c-8119-62c1592fdb68",
+    "name": "fleet-management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "6069225"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8080/vehicles/B1234XYZ/location",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vehicles/:plat_number/location",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            ":plat_number",
+            "location"
+          ],
+          "variable": [
+            {
+              "key": "plat_number",
+              "value": "B1234XYZ"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/vehicles/B1234XYZ/history",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vehicles/B1234XYZ/history?start=1715000000&end=17735870000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vehicles",
+            "B1234XYZ",
+            "history"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "1715000000"
+            },
+            {
+              "key": "end",
+              "value": "17735870000"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
